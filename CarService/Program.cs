@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using CarService.Infrastructure;
+using CarService.Core;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Configure DbContext and repository services
+builder.Services.AddDbContext<CarServiceDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
 
 var app = builder.Build();
 
