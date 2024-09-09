@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home - Car Workshop";
+}
+
+<div class="container-fluid bg-dark text-light py-5">
+    <div class="text-center">
+        <h1 class="display-3">Welcome to Our Car Workshop</h1>
+        <p class="lead">Professional automotive services for all your needs</p>
+        <hr class="my-4 border-light" />
+        <p>To access all features, please <a asp-page="/Account/Login" class="text-info">log in</a> or <a asp-page="/Account/Register" class="text-info">register</a>.</p>
+        <p>Make sure to read our <a asp-page="/Privacy" class="text-warning">Privacy Policy</a> before proceeding.</p>
+        <a class="btn btn-lg btn-primary mt-4" asp-page="/Services">View Our Services</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card bg-secondary text-light mb-4">
+                <div class="card-body text-center">
+                    <h3>Maintenance</h3>
+                    <p>Comprehensive vehicle check-ups to keep your car in perfect condition.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card bg-secondary text-light mb-4">
+                <div class="card-body text-center">
+                    <h3>Repair</h3>
+                    <p>From minor fixes to major overhauls, we've got you covered.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card bg-secondary text-light mb-4">
+                <div class="card-body text-center">
+                    <h3>Diagnostics</h3>
+                    <p>Advanced diagnostic services to identify issues with your vehicle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

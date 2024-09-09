@@ -1,0 +1,101 @@
+/* Definiowanie podstawowego wygl¹du strony */
+html {
+    font-size: 14px; /* Rozmiar czcionki w podstawowym widoku */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* Rozmiar czcionki w szerszych widokach */
+    }
+}
+
+body {
+    background-color: #121212; /* Ciemne t³o dla ca³ej strony */
+    color: #e0e0e0; /* Jasny kolor tekstu */
+    margin-bottom: 60px; /* Margines dolny dla przestrzeni na stopkê */
+    font-family: Arial, sans-serif; /* Ustawienie rodziny czcionek */
+}
+
+/* Styl dla nag³ówków i stopki */
+.navbar {
+    background-color: #1f1f1f; /* Ciemniejsze t³o dla nag³ówka */
+    color: #e0e0e0; /* Jasny kolor tekstu */
+    position: relative;
+    z-index: 1000; /* Wysoki z-index, aby byæ na wierzchu innych elementów */
+}
+
+.navbar-nav .nav-link {
+    color: #e0e0e0; /* Jasny kolor linków */
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #ffffff; /* Kolor linków po najechaniu */
+    }
+
+/* Styl dla elementów nawigacji */
+.navbar-nav .btn {
+    color: #e0e0e0; /* Kolor tekstu przycisków */
+    background-color: #333; /* T³o przycisków */
+    border: 1px solid #444; /* Obramowanie przycisków */
+    position: relative;
+    z-index: 1001; /* Wysoki z-index, aby byæ na wierzchu innych elementów */
+}
+
+    .navbar-nav .btn:hover {
+        color: #ffffff; /* Kolor tekstu przycisków po najechaniu */
+        background-color: #555; /* T³o przycisków po najechaniu */
+    }
+
+/* Styl dla kart i przycisków */
+.card {
+    background-color: #2c2c2c; /* T³o kart */
+    color: #ffffff; /* Jasny tekst na kartach */
+}
+
+/* Styl dla przycisków */
+.btn-primary {
+    background-color: #007bff; /* Kolor przycisków */
+    border-color: #007bff; /* Kolor obramowania przycisków */
+}
+
+a {
+    color: #17a2b8; /* Kolor linków */
+}
+
+    a:hover {
+        color: #ffffff; /* Kolor linków po najechaniu */
+    }
+
+/* Styl dla pól formularzy, przycisków i inputów */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #007bff, 0 0 0 0.25rem #007bff; /* Kolor cienia dla elementów w fokusu */
+}
+
+/* Wyrównanie zawartoœci */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+V\/* Poprawki dla elementów logowania */
+.navbar-nav .nav-item .nav-link {
+    color: #e0e0e0; /* Jasny kolor tekstu linków */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffffff; /* Kolor tekstu linków po najechaniu */
+}
+
+/* Poprawki dla formularza logowania */
+#logoutForm {
+    display: flex;
+    align-items: center;
+}
+
+#logout {
+    color: #e0e0e0; /* Kolor tekstu przycisku */
+}
+
+    #logout:hover {
+        color: #ffffff; /* Kolor tekstu przycisku po najechaniu */
+    }
