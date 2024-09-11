@@ -271,3 +271,4 @@ C:\Users\Lenovo\Desktop\SerwisMotoryzacyjny\bin\Debug\net8.0\Microsoft.AspNetCor
 C:\Users\Lenovo\Desktop\SerwisMotoryzacyjny\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Lenovo\Desktop\SerwisMotoryzacyjny\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Lenovo\Desktop\SerwisMotoryzacyjny\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\Lenovo\Desktop\SerwisMotoryzacyjny\obj\Debug\net8.0\SerwisMotoryzacyjny.sourcelink.json
