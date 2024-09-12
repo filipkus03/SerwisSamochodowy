@@ -5,17 +5,20 @@ using SerwisMotoryzacyjny.Infrastructure.Repositories;
 using SerwisMotoryzacyjny.Domain.Interfaces;
 using System;
 using SerwisMotoryzacyjny.Infrastructure.Data;
-
+using Microsoft.Build.Framework;
+using SerwisMotoryzacyjny.Domain.Entities;
+using System.Diagnostics;
+Debug.WriteLine("dupa");
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Konfiguracja po³¹czenia do bazy danych logowania
-var connectionString = builder.Configuration.GetConnectionString("DBLoginsConnection")
-    ?? throw new InvalidOperationException("Connection string 'DBLoginsConnection' not found.");
+var connectionString = builder.Configuration.GetConnectionString("DBConnection")
+    ?? throw new InvalidOperationException("Connection string 'DBConnection' not found.");
 
 // Konfiguracja po³¹czenia do bazy danych dla innych modu³ów (np. Parts, Contact, Pricing)
-var appConnectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var appConnectionString = builder.Configuration.GetConnectionString("DBConnection")
+    ?? throw new InvalidOperationException("Connection string 'DBConnection' not found.");
 
 // Konfiguracja kontekstu bazy danych dla logowania
 builder.Services.AddDbContext<DBLogins>(options =>
@@ -24,6 +27,7 @@ builder.Services.AddDbContext<DBLogins>(options =>
 // Konfiguracja kontekstu bazy danych dla aplikacji
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(appConnectionString));
+
 
 // Konfiguracja to¿samoœci (Identity) i dodanie ról
 builder.Services.AddDefaultIdentity<SerwisMotoryzacyjnyUser>(options =>
@@ -46,6 +50,7 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
 });
+
 
 var app = builder.Build();
 
