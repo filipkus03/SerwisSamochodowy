@@ -6,10 +6,10 @@ namespace SerwisMotoryzacyjny.Domain.Interfaces
 {
     public interface IPartRepository
     {
-        Task<IEnumerable<Part>> GetAllPartsAsync();     // Pobranie wszystkich części
-        Task<Part> GetPartByIdAsync(int id);            // Pobranie części po ID
-        Task AddPartAsync(Part part);                   // Dodanie nowej części
-        Task UpdatePartAsync(Part part);                // Aktualizacja istniejącej części
-        Task DeletePartAsync(int id);                   // Usunięcie części po ID
+        Task<IEnumerable<Part>> GetAllPartsAsync();
+        Task<Part> GetPartByIdAsync(int id);
+        Task AddPartAsync(Part part);
+        Task UpdatePartAsync(Part part);
+        Task DeletePartAsync(int id);
     }
 }

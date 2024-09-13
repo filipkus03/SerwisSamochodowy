@@ -31,7 +31,6 @@
                             <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
 
-                        <!-- Linki dla roli 0 -->
                         @if (SignInManager.IsSignedIn(User))
                         {
                             var user = await UserManager.GetUserAsync(User);
@@ -50,7 +49,7 @@
                                     <a class="nav-link text-light" asp-area="" asp-page="/Contact">Contact</a>
                                 </li>
                             }
-                            if (user?.Role == 1) // Link do admina, jeśli potrzebne
+                            if (user?.Role == 1) 
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-light" asp-area="" asp-page="/Admin">Admin</a>

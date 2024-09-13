@@ -1,101 +1,126 @@
-/* Definiowanie podstawowego wygl¹du strony */
 html {
-    font-size: 14px; /* Rozmiar czcionki w podstawowym widoku */
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 16px; /* Rozmiar czcionki w szerszych widokach */
+        font-size: 16px;
     }
 }
 
 body {
-    background-color: #121212; /* Ciemne t³o dla ca³ej strony */
-    color: #e0e0e0; /* Jasny kolor tekstu */
-    margin-bottom: 60px; /* Margines dolny dla przestrzeni na stopkê */
-    font-family: Arial, sans-serif; /* Ustawienie rodziny czcionek */
+    background-color: #121212;
+    color: #e0e0e0;
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
 }
 
-/* Styl dla nag³ówków i stopki */
 .navbar {
-    background-color: #1f1f1f; /* Ciemniejsze t³o dla nag³ówka */
-    color: #e0e0e0; /* Jasny kolor tekstu */
+    background-color: #1f1f1f; 
+    color: #e0e0e0;
     position: relative;
-    z-index: 1000; /* Wysoki z-index, aby byæ na wierzchu innych elementów */
+    z-index: 1000;
 }
 
 .navbar-nav .nav-link {
-    color: #e0e0e0; /* Jasny kolor linków */
+    color: #e0e0e0;
 }
 
     .navbar-nav .nav-link:hover {
-        color: #ffffff; /* Kolor linków po najechaniu */
+        color: #ffffff;
     }
 
-/* Styl dla elementów nawigacji */
 .navbar-nav .btn {
-    color: #e0e0e0; /* Kolor tekstu przycisków */
-    background-color: #333; /* T³o przycisków */
-    border: 1px solid #444; /* Obramowanie przycisków */
+    color: #e0e0e0;
+    background-color: #333;
+    border: 1px solid #444;
     position: relative;
-    z-index: 1001; /* Wysoki z-index, aby byæ na wierzchu innych elementów */
+    z-index: 1001;
 }
 
     .navbar-nav .btn:hover {
-        color: #ffffff; /* Kolor tekstu przycisków po najechaniu */
-        background-color: #555; /* T³o przycisków po najechaniu */
+        color: #ffffff;
+        background-color: #555;
     }
 
-/* Styl dla kart i przycisków */
 .card {
-    background-color: #2c2c2c; /* T³o kart */
-    color: #ffffff; /* Jasny tekst na kartach */
+    background-color: #2c2c2c;
+    color: #ffffff;
 }
 
-/* Styl dla przycisków */
 .btn-primary {
-    background-color: #007bff; /* Kolor przycisków */
-    border-color: #007bff; /* Kolor obramowania przycisków */
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 a {
-    color: #17a2b8; /* Kolor linków */
+    color: #17a2b8;
 }
 
     a:hover {
-        color: #ffffff; /* Kolor linków po najechaniu */
+        color: #ffffff;
     }
 
-/* Styl dla pól formularzy, przycisków i inputów */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem #007bff, 0 0 0 0.25rem #007bff; /* Kolor cienia dla elementów w fokusu */
+    box-shadow: 0 0 0 0.1rem #007bff, 0 0 0 0.25rem #007bff;
 }
 
-/* Wyrównanie zawartoœci */
 html {
     position: relative;
     min-height: 100%;
 }
 
-V\/* Poprawki dla elementów logowania */
+
 .navbar-nav .nav-item .nav-link {
-    color: #e0e0e0; /* Jasny kolor tekstu linków */
+    color: #e0e0e0;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #ffffff; /* Kolor tekstu linków po najechaniu */
+    color: #ffffff;
 }
 
-/* Poprawki dla formularza logowania */
 #logoutForm {
     display: flex;
     align-items: center;
 }
 
 #logout {
-    color: #e0e0e0; /* Kolor tekstu przycisku */
+    color: #e0e0e0;
 }
 
     #logout:hover {
-        color: #ffffff; /* Kolor tekstu przycisku po najechaniu */
+        color: #ffffff;
     }
+.table-light-text {
+    color: #f8f9fa;
+}
+
+.table {
+    background-color: #2c2c2c; 
+    color: #ffffff;
+    border-color: #444;
+}
+
+    .table thead {
+        background-color: #1f1f1f; 
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.table thead th {
+    color: #ffffff;
+}
+
+.table tbody td {
+    color: #ffffff;
+}

@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Identity;
 
 namespace SerwisMotoryzacyjny.Areas.Identity.Data;
 
-// Add profile data for application users by adding properties to the SerwisMotoryzacyjnyUser class
 public class SerwisMotoryzacyjnyUser : IdentityUser
 {
     public string FirstName { get; set; }

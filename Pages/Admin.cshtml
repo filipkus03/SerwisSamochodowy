@@ -1,9 +1,77 @@
 ﻿@page
 @model SerwisMotoryzacyjny.Pages.AdminModel
 @{
-    ViewData["Title"] = "Admin Page";
+    ViewData["Title"] = "Admin Dashboard";
 }
 
-<h1>Admin Page</h1>
+<div class="container-fluid bg-dark text-light py-4">
+    <div class="container">
+        <h1 class="display-4">Admin Dashboard</h1>
+        <p class="lead">Welcome, Admin! This page is restricted to administrators.</p>
+        <hr class="my-4 border-light" />
+    </div>
+</div>
 
-<p>Welcome, Admin! This page is restricted to administrators.</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Manage Users</h3>
+                    <p class="card-text">View, edit, and manage user accounts and roles.</p>
+                    <a class="btn btn-primary" asp-page="/Admin/ManageUsers">Manage Users</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h3 class="card-title">View Reports</h3>
+                    <p class="card-text">Access and generate various reports related to services and finances.</p>
+                    <a class="btn btn-primary" asp-page="/Admin/Reports">View Reports</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Manage Services</h3>
+                    <p class="card-text">Add, edit, or remove services offered by the workshop.</p>
+                    <a class="btn btn-primary" asp-page="/Admin/ManageServices">Manage Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Pricing Management</h3>
+                    <p class="card-text">Update and review pricing for various services.</p>
+                    <a class="btn btn-primary" asp-page="/Admin/ManagePricing">Pricing Management</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Parts Management</h3>
+                    <p class="card-text">Add, edit, or remove car parts from the inventory.</p>
+                    <a class="btn btn-primary" asp-page="/Admin/ManageParts">Parts Management</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Contact Requests</h3>
+                    <p class="card-text">Review and respond to customer contact requests.</p>
+                    <a class="btn btn-primary" asp-page="/Admin/ContactRequests">Contact Requests</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

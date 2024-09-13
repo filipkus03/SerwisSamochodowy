@@ -1,24 +1,31 @@
-﻿@model SerwisMotoryzacyjny.Domain.Entities.Contact
+﻿@page
+@model SerwisMotoryzacyjny.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
 
-<h1>Create Contact</h1>
-
-<form asp-action="Create">
-    <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Message" class="control-label"></label>
-        <textarea asp-for="Message" class="form-control" rows="4"></textarea>
-        <span asp-validation-for="Message" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
-    </div>
-</form>
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+    <p>Feel free to contact us for any inquiries or to schedule an appointment.</p>
+    <form asp-page-handler="SendContactForm" method="post">
+        <div class="form-group">
+            <label asp-for="Contact.Name"></label>
+            <input type="text" class="form-control" asp-for="Contact.Name" required />
+            <span asp-validation-for="Contact.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Contact.Email"></label>
+            <input type="email" class="form-control" asp-for="Contact.Email" required />
+            <span asp-validation-for="Contact.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Contact.Message"></label>
+            <textarea class="form-control" asp-for="Contact.Message" rows="4" required></textarea>
+            <span asp-validation-for="Contact.Message" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    <p>Or contact us directly:</p>
+    <p>Email: info@yourservice.com</p>
+    <p>Phone: (123) 456-7890</p>
+</div>

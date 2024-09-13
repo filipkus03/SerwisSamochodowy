@@ -19,7 +19,6 @@ namespace SerwisMotoryzacyjny.Infrastructure.Data
             builder.ApplyConfiguration(new ContactConfiguration());
         }
 
-        // Zdefiniuj DbSet dla każdej encji, którą chcesz przechowywać w bazie danych
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Part> Parts { get; set; }
         public DbSet<Pricing> Pricings { get; set; }

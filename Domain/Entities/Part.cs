@@ -2,10 +2,10 @@
 {
     public class Part
     {
-        public int Id { get; set; }  // Klucz główny w bazie danych
-        public string Name { get; set; }  // Nazwa części
-        public string Description { get; set; }  // Opis części
-        public decimal Price { get; set; }  // Cena części
-        public int Quantity { get; set; }  // Ilość w magazynie
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }
     }
 }

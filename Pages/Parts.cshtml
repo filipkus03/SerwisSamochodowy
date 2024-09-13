@@ -1,26 +1,31 @@
 ﻿@page
-@model PartsModel
+@model SerwisMotoryzacyjny.Pages.PartsModel
+
 @{
     ViewData["Title"] = "Parts";
+    Layout = "_Layout"; 
 }
 
-<div class="container">
-    <h1>@ViewData["Title"]</h1>
-    <ul>
-        <li>
-            <h2>Oil Filter</h2>
-            <p>High-quality oil filter for various car models.</p>
-            <p>Price: $15</p>
-        </li>
-        <li>
-            <h2>Brake Pads</h2>
-            <p>Durable brake pads for safe driving.</p>
-            <p>Price: $45</p>
-        </li>
-        <li>
-            <h2>Tires</h2>
-            <p>Reliable tires for all types of vehicles.</p>
-            <p>Price: $90 each</p>
-        </li>
-    </ul>
-</div>
+<h2>Available Parts</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var part in Model.Parts)
+        {
+            <tr>
+                <td>@part.Name</td>
+                <td>@part.Description</td>
+                <td>@part.Price</td>
+                <td>@part.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>

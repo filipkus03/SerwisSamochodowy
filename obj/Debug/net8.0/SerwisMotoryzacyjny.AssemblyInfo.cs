@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SerwisMotoryzacyjny")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63bd970c57e90acd3a92e77571f157bf1219eed6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1bcb97684f2cb78d72d4d568b263879b0d2ec91")]
 [assembly: System.Reflection.AssemblyProductAttribute("SerwisMotoryzacyjny")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SerwisMotoryzacyjny")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SerwisMotoryzacyjny.Domain.Entities;
 using SerwisMotoryzacyjny.Domain.Interfaces;
+using SerwisMotoryzacyjny.Infrastructure.Data;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SerwisMotoryzacyjny.Infrastructure.Data;
-
 
 namespace SerwisMotoryzacyjny.Infrastructure.Repositories
 {
