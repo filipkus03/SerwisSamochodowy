@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿﻿@using Microsoft.AspNetCore.Identity
 @using SerwisMotoryzacyjny.Areas.Identity.Data
 @inject UserManager<SerwisMotoryzacyjnyUser> UserManager
 @inject SignInManager<SerwisMotoryzacyjnyUser> SignInManager
@@ -49,7 +49,7 @@
                                     <a class="nav-link text-light" asp-area="" asp-page="/Contact">Contact</a>
                                 </li>
                             }
-                            if (user?.Role == 1) 
+                            if (user?.Role == 1)
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-light" asp-area="" asp-page="/Admin">Admin</a>

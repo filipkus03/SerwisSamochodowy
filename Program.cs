@@ -16,6 +16,14 @@ Debug.WriteLine("dupa");
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Dodaj obs³ugê lokalizacji
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+// Dodaj MVC z lokalizacj¹ widoków oraz adnotacjami danych
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization() // To jest wa¿ne dla lokalizacji widoków
+    .AddDataAnnotationsLocalization();
+
 var connectionString = builder.Configuration.GetConnectionString("DBConnection")
     ?? throw new InvalidOperationException("Connection string 'DBConnection' not found.");
 
@@ -34,12 +42,12 @@ builder.Services.AddDefaultIdentity<SerwisMotoryzacyjnyUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = true;
 })
-.AddRoles<IdentityRole>() 
+.AddRoles<IdentityRole>()
 .AddEntityFrameworkStores<DBLogins>();
 
 builder.Services.AddScoped<IContactRepository, SerwisMotoryzacyjny.Infrastructure.Repositories.ContactRepository>();
 builder.Services.AddScoped<IPartRepository, SerwisMotoryzacyjny.Infrastructure.Repositories.PartRepository>();
-builder.Services.AddScoped<IPricingRepository, SerwisMotoryzacyjny.Infrastructure.Repositories.PricingRepository>(); 
+builder.Services.AddScoped<IPricingRepository, SerwisMotoryzacyjny.Infrastructure.Repositories.PricingRepository>();
 builder.Services.AddScoped<IPartRepository, PartRepository>();
 
 builder.Services.AddRazorPages();
@@ -63,8 +71,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseAuthentication(); 
-app.UseAuthorization(); 
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapRazorPages();
 
